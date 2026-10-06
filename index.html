@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#123e39"><title>Cortes Home y Móvil</title><meta name="description" content="Copia tus reportes de Home y Móvil como texto para WhatsApp desde el celular."><style>:root{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#173932;background:#f0f5f2;font-synthesis:none}*{box-sizing:border-box}body{margin:0}main{max-width:860px;margin:auto;padding:42px 24px 26px}header{padding-bottom:25px}.brand,.eyebrow{font-size:11px;font-weight:750;letter-spacing:.14em}.brand{color:#54756b}h1{font-size:clamp(32px,6vw,48px);line-height:1.12;letter-spacing:-.045em;margin:17px 0}header p{color:#64766e;line-height:1.5}nav{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px}button,a{touch-action:manipulation}button{font:inherit;cursor:pointer}.tab{border:1px solid #ccdcd3;background:#fff;border-radius:15px;padding:17px;text-align:left;font-size:18px;font-weight:650;color:#52665e}.tab span{display:block;margin:5px 0 0 27px;font-size:10px;letter-spacing:.1em;font-weight:650}.tab.active{background:#143f37;color:white;border-color:#143f37;box-shadow:0 6px 16px #143f3718}.report{background:#fff;border:1px solid #d9e3dc;border-radius:19px;overflow:hidden;box-shadow:0 12px 30px #15372c06}.report-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:23px 25px}.eyebrow{color:#729084;font-size:9px}h2{font-size:20px;margin:7px 0 0;letter-spacing:-.025em}.report-heading a{font-size:12px;white-space:nowrap;color:#406f60;text-decoration:none}.actions{display:flex;gap:10px;padding:0 25px}.primary,.secondary,#select{display:flex;align-items:center;justify-content:center;min-height:48px;border-radius:10px;font-size:14px;font-weight:650;padding:12px 18px;text-decoration:none;border:0}.primary{background:#1d7655;color:white;flex:1}.primary:hover{background:#155f44}.secondary,#select{color:#214a3b;background:#edf5ef}#status{font-size:12px;line-height:1.5;color:#65766c;padding:0 25px;min-height:20px}details{margin:15px 25px;border-top:1px solid #e4ebe7;padding-top:13px;font-size:12px;color:#496a5c}summary{cursor:pointer;min-height:30px}details p{line-height:1.5}textarea{display:block;width:100%;height:270px;margin-top:13px;border:1px solid #b9cebf;padding:12px;border-radius:9px;font:14px/1.6 system-ui;color:#1b332a;background:#fafffc}#select{min-height:40px;font-size:12px}pre{margin:23px 0 0;padding:25px;border-top:1px solid #e4ebe7;background:#fcfdfb;white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.8 system-ui;color:#263e32;user-select:text}footer{text-align:center;font-size:11px;line-height:1.8;color:#7a8c81;padding:22px 0 0}:focus-visible{outline:3px solid #6dba95;outline-offset:3px}@media(max-width:540px){main{padding:27px 14px 20px}.report-heading{padding:19px 17px}h2{font-size:18px}.actions{padding:0 17px;flex-direction:column}.primary,.secondary{width:100%}#status{padding:0 17px}details{margin:15px 17px}pre{padding:20px 15px;font-size:12.5px}.tab{padding:15px}.report-heading a{font-size:11px}}@media(prefers-reduced-motion:no-preference){button,a{transition:background .15s ease}}
+</style></head>
+<body><main><header><div class="brand">CORTES · HOME Y MÓVIL</div><h1>Tu reporte, listo<br>para WhatsApp.</h1><p>Elige el reporte y copia todo el texto en un toque.</p></header>
+<nav aria-label="Elegir reporte"><button class="tab active" id="movil" aria-pressed="true">📱 Móvil <span>NETMOBILE</span></button><button class="tab" id="home" aria-pressed="false">🏠 Home <span>PREVENTAS</span></button></nav>
+<section class="report"><div class="report-heading"><div><div class="eyebrow">ÚLTIMO REPORTE GUARDADO</div><h2 id="report-title">Cargando reporte…</h2></div><a id="sheet" target="_blank" rel="noopener">Ver en Sheet ↗</a></div>
+<div class="actions"><button id="copy" class="primary">Copiar para WhatsApp</button><a id="whatsapp" class="secondary" target="_blank" rel="noopener">Abrir WhatsApp ↗</a></div><p id="status" role="status" aria-live="polite">Se copiará el reporte completo, con saltos de línea y formato.</p>
+<details><summary>¿No puedes copiar? Selecciona el texto</summary><p>Toca “Seleccionar todo”, mantén pulsado el texto seleccionado y elige Copiar.</p><button id="select">Seleccionar todo</button><textarea id="manual-text" readonly aria-label="Reporte completo para copiar manualmente" spellcheck="false"></textarea></details>
+<pre id="preview" aria-label="Contenido del reporte"></pre></section>
+<footer>Usa el mensaje de texto de WhatsApp para pegar el reporte.<br>Los cortes manuales se guardan también en CORTE_HOY.</footer></main><script>let reports = {
+  "movil": {
+    "title": "Móvil",
+    "subtitle": "Ventas pospago NETMOBILE",
+    "text": "📊 *AVANCE VENTAS POSPAGO NETMOBILE*\n📅 *Fecha:* 06/10/2026\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n📈 *Resumen General del Día:*\n• Total Ventas del Día: 4\n• Renta Mensual Acumulada: $73.18 USD (C$ 2,680.00)\n• Mix de Producto (Planes):\n  - 4LX Full Conectado 30 GB ($16.93 USD): 2 (50.0%)\n  - 4PX Full Conectado 35 GB ($19.66 USD): 2 (50.0%)\n• Validación Calibración: 3 Verificados (75.0%) | 1 En gestión / Pendientes (25.0%) | 0 Rechazos (0.0%)\n\n👥 *Desglose por Asesor:*\n• Carlos Sanchez: 1 venta (Base: 1 Leads — Renta: $19.66 USD)\n• Enmanuel Nuñez: 1 venta (Base: 1 Leads — Renta: $19.66 USD)\n• Jahoska Galeano: 1 venta (Base: 1 Inbound — Renta: $16.93 USD)\n• Seydi Mercado: 1 venta (Base: 1 Base Prepago — Renta: $16.93 USD)\n\n📋 *Distribución por Base:*\n• Leads: 2 ventas (50.0%)\n• Base Prepago: 1 venta (25.0%)\n• Inbound: 1 venta (25.0%)\n\n🔍 *Estatus Operativo y Calibración:*\n• Verificados / Calibrados: 3 (75.0%)\n• Pendientes / En gestión: 1 (25.0%) —\n  - J. Rivas (E. Nuñez - Tipificación: Pendiente)\n• Rechazos de Calibración: 0 (0.0%)\n\n⏰ *Producción Acumulada por Cortes:*\n• 10:00 AM: 4 ingresos | Acumulado: 4 ($73.18 USD)\n• 12:00 PM: Pendiente\n• 02:00 PM: Pendiente\n• 04:00 PM: Pendiente\n• 06:00 PM: Pendiente\n\n📍 *Cobertura Geográfica:*\n• Managua: 2 (50.0%)\n• León: 1 (25.0%)\n• Masaya: 1 (25.0%)\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n📊 *Comparativo de Producción (Solo Día 06):*\n• Octubre (06/10/2026): 4 ventas al corte\n• Septiembre (06/09/2026): 0 ventas\n• Agosto (06/08/2026): 17 ventas\n• Julio (06/07/2026): 33 ventas\n\n📅 *Acumulado MTD (Día 01 al 06 de cada mes):*\n• Octubre 2026: 63 ventas al corte\n• Septiembre 2026: 108 ventas\n• Agosto 2026: 82 ventas\n• Julio 2026: 128 ventas\n━━━━━━━━━━━━━━━━━━━━━━━━━━",
+    "sheetUrl": "https://docs.google.com/spreadsheets/d/155DiYsdep38ObP5rEa0xeSskOv83lnS4j282zGJvpoA/edit#gid=1070694366&range=AJ3"
+  },
+  "home": {
+    "title": "Home",
+    "subtitle": "Preventas Tigo Home",
+    "text": "📊 AVANCE PREVENTAS HOME - CORTE 09:52 AM (PRUEBA)\n📅 Fecha: 06/10/2026\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n📈 Resumen General del Día (06/10/2026):\n• Total Preventas del Día: 0\n• Renta Mensual Acumulada: C$ 0.00\n• Mix de Producto: Sin ingresos registrados\n• Validación Plataforma (Tipificación 1): 0 Verificados\n\n👥 Desglose por Asesor (Día 06):\n• Sin preventas registradas al corte\n\n📋 Distribución por Base:\n• Sin preventas registradas al corte\n\n🔍 Estatus Operativo (Tipificación 2):\n• Sin gestiones registradas al corte\n\n⏰ Producción Acumulada por Cortes (Día 06):\n• 09:52 AM – Corte de prueba: 0 ingresos | Acumulado: 0\n\n📍 Cobertura Geográfica:\n• Sin preventas registradas al corte\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n📊 Comparativo de Producción (Solo Día 06):\n• Octubre (06/10/2026): 0 preventas al corte\n• Septiembre (06/09/2026): 0 preventas\n• Agosto (06/08/2026): 5 preventas\n• Julio (06/07/2026): 11 preventas\n\n📅 Acumulado MTD (Día 01 al 06 de cada mes - Fuente: Respuestas de formulario 3):\n• Octubre 2026: 39 preventas al corte\n• Septiembre 2026: 35 preventas\n• Agosto 2026: 22 preventas\n• Julio 2026: 49 preventas\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+    "sheetUrl": "https://docs.google.com/spreadsheets/d/1YyOwEsGHnyWKGt7wjupxMULIcakyNg-g7C5LTZirh-Y/edit#gid=1205834616&range=AJ2"
+  }
+}
+;
+let current = 'movil';
+const status = document.getElementById('status');
+const manual = document.getElementById('manual-text');
+const copy = document.getElementById('copy');
+function render(type) {
+  current = type;
+  const report = reports[type];
+  document.getElementById('report-title').textContent = report.subtitle;
+  document.getElementById('preview').textContent = report.text;
+  manual.value = report.text;
+  document.getElementById('sheet').href = report.sheetUrl;
+  document.getElementById('whatsapp').href = 'https://wa.me/?text=' + encodeURIComponent(report.text);
+  document.querySelectorAll('.tab').forEach(tab => {
+    tab.classList.toggle('active', tab.id === type);
+    tab.setAttribute('aria-pressed', String(tab.id === type));
+  });
+  copy.textContent = 'Copiar para WhatsApp';
+  status.textContent = 'Se copiará el reporte completo, con saltos de línea y formato.';
+}
+copy.addEventListener('click', async () => {
+  if (!reports) return;
+  const text = reports[current].text;
+  try {
+    if (!navigator.clipboard?.writeText) throw new Error('Clipboard unavailable');
+    await navigator.clipboard.writeText(text);
+    copy.textContent = '✓ Reporte copiado';
+    status.textContent = 'Abre WhatsApp, mantén pulsado el cuadro del mensaje y toca Pegar.';
+  } catch {
+    const input = document.createElement('textarea');
+    input.value = text;
+    input.style.cssText = 'position:fixed;top:0;left:0;opacity:0;font-size:16px';
+    document.body.append(input);
+    input.focus(); input.select(); input.setSelectionRange(0, text.length);
+    let copied = false;
+    try { copied = document.execCommand('copy'); } catch {}
+    input.remove();
+    if (copied) {
+      copy.textContent = '✓ Reporte copiado';
+      status.textContent = 'Abre WhatsApp y pega el texto en el mensaje.';
+    } else {
+      document.querySelector('details').open = true;
+      manual.focus(); manual.select(); manual.setSelectionRange(0, manual.value.length);
+      status.textContent = 'Tu navegador no permitió copiar. Mantén pulsado el texto seleccionado y elige Copiar, o usa Abrir WhatsApp.';
+    }
+  }
+});
+document.getElementById('select').addEventListener('click', () => {
+  manual.focus(); manual.select(); manual.setSelectionRange(0, manual.value.length);
+});
+document.querySelectorAll('.tab').forEach(tab => tab.addEventListener('click', () => reports && render(tab.id)));
+render('movil');</script></body></html>
+
